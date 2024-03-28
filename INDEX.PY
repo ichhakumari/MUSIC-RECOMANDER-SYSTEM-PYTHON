@@ -12,3 +12,9 @@ from sklearn.manifold import TSNE
 
 import warnings
 warnings.filterwarnings('ignore')
+
+# IMPORT DATASET
+from google.colab import files
+
+
+uploaded = files.upload()
