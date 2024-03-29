@@ -33,3 +33,7 @@ tracks.shape
 tracks.info()
 
 tracks.isnull().sum()
+
+tracks.dropna(inplace = True)
+tracks.isnull().sum().plot.bar()
+plt.show()
