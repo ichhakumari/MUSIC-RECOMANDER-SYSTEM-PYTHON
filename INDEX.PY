@@ -31,3 +31,5 @@ tracks.head()
 tracks.shape
 
 tracks.info()
+
+tracks.isnull().sum()
