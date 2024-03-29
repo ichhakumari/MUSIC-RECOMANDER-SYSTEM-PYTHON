@@ -29,3 +29,5 @@ tracks.head()
 
 #data cleaning
 tracks.shape
+
+tracks.info()
