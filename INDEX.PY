@@ -26,3 +26,6 @@ tracks = pd.read_csv(io.BytesIO(uploaded['data (1).csv']))
 print(tracks)
 
 tracks.head()
+
+#data cleaning
+tracks.shape
