@@ -62,4 +62,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sb
 
+plt.subplots(figsize = (15, 5))
+for i, col in enumerate(floats):
+    plt.subplot(3, 5, i + 1)
+    sb.distplot(tracks[col])
+plt.tight_layout()
+plt.show()
 
