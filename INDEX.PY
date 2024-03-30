@@ -51,4 +51,7 @@ plt.show()
 #columns with float values in tracks
 floats = []
 for col in tracks.columns:
-   
+   if tracks[col].dtype == 'float':
+        floats.append(col)
+
+len(floats) 
