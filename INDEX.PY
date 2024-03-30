@@ -55,3 +55,11 @@ for col in tracks.columns:
         floats.append(col)
 
 len(floats) 
+
+
+!pip install seaborn
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sb
+
+
