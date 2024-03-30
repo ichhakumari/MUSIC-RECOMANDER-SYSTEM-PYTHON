@@ -47,3 +47,8 @@ plt.figure(figsize = (10, 5))
 sb.countplot(tracks['release_date'])
 plt.axis('on')
 plt.show()
+
+#columns with float values in tracks
+floats = []
+for col in tracks.columns:
+   
