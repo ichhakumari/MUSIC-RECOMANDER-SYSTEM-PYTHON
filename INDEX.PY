@@ -41,3 +41,8 @@ plt.show()
 tracks = tracks.drop(['id'], axis = 1)
 
 tracks.head()
+
+plt.figure(figsize = (10, 5))
+sb.countplot(tracks['release_date'])
+plt.axis('on')
+plt.show()
