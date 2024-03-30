@@ -39,3 +39,5 @@ tracks.isnull().sum().plot.bar()
 plt.show()
 
 tracks = tracks.drop(['id'], axis = 1)
+
+tracks.head()
