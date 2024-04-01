@@ -79,4 +79,9 @@ def get_similarities(song_name, data):
     text_array1 = song_vectorizer.transform(data[data['name']==song_name]['danceability']).toarray()
     num_array1 = data[data['name']==song_name].select_dtypes(include=np.number).to_numpy()
 
-   
+    # We will store similarity for each row of the dataset.
+    sim = []
+    for idx, row in data.iterrows():
+        name = row['name']
+
+       
