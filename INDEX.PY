@@ -72,3 +72,11 @@ plt.show()
 
 #Due to the large dataset size, the computation cost/time will be high. The recommended system will be implemented using the most popular 10,000 songs.
 tracks = tracks.sort_values(by=['popularity'], ascending=False).head(10000)
+
+def get_similarities(song_name, data):
+
+    # Getting vector for the input song.
+    text_array1 = song_vectorizer.transform(data[data['name']==song_name]['danceability']).toarray()
+    num_array1 = data[data['name']==song_name].select_dtypes(include=np.number).to_numpy()
+
+   
