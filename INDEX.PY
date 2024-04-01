@@ -83,5 +83,14 @@ def get_similarities(song_name, data):
     sim = []
     for idx, row in data.iterrows():
         name = row['name']
+          # Getting vector for current song.
+        text_array2 = song_vectorizer.transform(data[data['name']==name]['danceability']).toarray()
+        num_array2 = data[data['name']==name].select_dtypes(include=np.number).to_numpy()
 
+        # Calculating similarities for text as well as numeric features
+        text_sim = cosine_similarity(text_array1, text_array2)[0][0]
+        num_sim = cosine_similarity(num_array1, num_array2)[0][0]
+        sim.append(text_sim + num_sim)
+
+    return sim
        
