@@ -112,4 +112,5 @@ for song in data.sample(n=5)['name'].values:
     # First song will be the input song itself as the similarity will be highest.
     display(data[['name', 'artists']][2:7])
 
-        
+     from sklearn.feature_extraction.text import CountVectorizer
+import numpy as np   
