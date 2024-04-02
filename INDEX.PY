@@ -99,5 +99,15 @@ def recommend_songs(song_name, data=tracks):
     if tracks[tracks['name'] == song_name].shape[0] == 0:
         print('This song is either not so popular or you\
         have entered invalid_name.\n Some songs you may like:\n')
+for song in data.sample(n=5)['name'].values:
+            print(song)
+        return
 
+    data['similarity_factor'] = get_similarities(song_name, data)
+
+    data.sort_values(by=['similarity_factor', 'popularity'],
+                    ascending = [False, False],
+                    inplace=True)
+
+   
         
