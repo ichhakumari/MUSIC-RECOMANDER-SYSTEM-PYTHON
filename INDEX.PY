@@ -94,3 +94,10 @@ def get_similarities(song_name, data):
 
     return sim
        
+def recommend_songs(song_name, data=tracks):
+    # Base case
+    if tracks[tracks['name'] == song_name].shape[0] == 0:
+        print('This song is either not so popular or you\
+        have entered invalid_name.\n Some songs you may like:\n')
+
+        
