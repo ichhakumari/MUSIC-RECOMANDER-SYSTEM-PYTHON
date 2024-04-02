@@ -109,5 +109,7 @@ for song in data.sample(n=5)['name'].values:
                     ascending = [False, False],
                     inplace=True)
 
-   
+    # First song will be the input song itself as the similarity will be highest.
+    display(data[['name', 'artists']][2:7])
+
         
