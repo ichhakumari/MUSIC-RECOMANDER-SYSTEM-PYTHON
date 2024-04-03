@@ -117,3 +117,4 @@ for song in data.sample(n=5)['name'].values:
       song_vectorizer = CountVectorizer(stop_words='english')
 
 tracks['danceability'] = tracks['danceability'].astype('str')
+song_vectorizer.fit(tracks['danceability'])
