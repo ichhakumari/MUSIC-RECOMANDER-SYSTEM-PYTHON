@@ -118,3 +118,5 @@ for song in data.sample(n=5)['name'].values:
 
 tracks['danceability'] = tracks['danceability'].astype('str')
 song_vectorizer.fit(tracks['danceability'])
+
+recommend_songs('Shape of You')
