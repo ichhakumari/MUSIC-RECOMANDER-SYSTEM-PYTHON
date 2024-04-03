@@ -113,4 +113,5 @@ for song in data.sample(n=5)['name'].values:
     display(data[['name', 'artists']][2:7])
 
      from sklearn.feature_extraction.text import CountVectorizer
-import numpy as np   
+     import numpy as np   
+      song_vectorizer = CountVectorizer(stop_words='english')
